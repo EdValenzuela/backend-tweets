@@ -65,8 +65,12 @@ const expressValidator = require("express-validator");
 require("dotenv").config();
 
 // import routes
-// const usersRoutes = require("./routes/users");
+
+// const authRoutes = require("./routes/auth");
+// const fileRoutes = require("./routes/file");
+// const relationRoutes = require("./router/relation");
 // const tweetsRoutes = require("./routes/tweets");
+// const usersRoutes = require("./routes/users");
 
 // app - express
 const app = express();
@@ -96,9 +100,13 @@ app.use(cookieParser());
 app.use(expressValidator());
 app.use(cors());
 
+// habilitar routing
 // routes middlewares
-// app.use("/api", usersRoutes);
+// app.use("/api", authRoutes);
+// app.use("/api", fileRoutes);
+// app.use("/api", relationRoutes);
 // app.use("/api", tweetsRoutes);
+// app.use("/api", usersRoutes);
 
 //port
 const port = process.env.PORT || 8000;
